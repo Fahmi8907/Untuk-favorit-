@@ -1,0 +1,105 @@
+.marquee-wrapper {
+  width: 100%;
+  overflow: hidden;
+  background: linear-gradient(to right, #ffc0cb, #ff99cc);
+  padding: 10px 0;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  position: fixed;
+  bottom: 0;
+  z-index: 999;
+}
+
+.marquee {
+  display: inline-block;
+  white-space: nowrap;
+  padding-left: 100%;
+  animation: marquee 15s linear infinite;
+  font-size: 18px;
+  color: #fff;
+  font-weight: bold;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}/* Stiker rapi dan lucu */
+.stiker-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+#stikerAlt1 {
+  width: 180px;
+  height: auto;
+  animation: stikerMasuk 1s ease-in-out;
+}
+
+/* Teks container cantik */
+.container {
+  background: rgba(255, 192, 203, 0.3);
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(255, 105, 180, 0.3);
+  max-width: 90%;
+  text-align: center;
+  animation: fadeMasuk 1.2s ease;
+}
+
+.titleC {
+  font-size: 22px;
+  color: #ff1493;
+  font-family: 'Comic Sans MS', cursive;
+  margin-bottom: 10px;
+}
+
+.messageC {
+  font-size: 18px;
+  color: #333;
+}
+.message {
+  background: rgba(255, 255, 255, 0.6);
+  padding: 25px;
+  margin: 20px auto;
+  max-width: 90%;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(255, 105, 180, 0.3);
+  text-align: left;
+  animation: fadeMasuk 1.2s ease;
+}
+
+/* Teks pesan */
+.message p {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeInUp 1s forwards;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #4a4a4a;
+  margin-bottom: 20px;
+}
+
+/* Font khusus untuk kalimat spesial */
+.fontAlt {
+  font-family: 'Pacifico', cursive;
+  font-size: 24px;
+  color: #d63384;
+}
+
+/* Animasi delay agar muncul satu-satu */
+.delay1 { animation-delay: 0.5s; }
+.delay2 { animation-delay: 1.5s; }
+.delay3 { animation-delay: 2.5s; }
+
+/* Animasi naik perlahan */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

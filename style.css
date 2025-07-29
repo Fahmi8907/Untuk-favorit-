@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #ffd6e8, #ffe6f0);
+  font-family: "Segoe UI", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.container {
+  text-align: center;
+  background-color: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  position: relative;
+  max-width: 90%;
+}
+
+/* Fade-in base */
+.fade {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s forwards;
+}
+.fade:active {
+  transform: translateY(0) rotate(-20deg);
+  transition: transform 0.20s ease;
+}
+/* Delay timing */
+.delay1 { animation-delay: 0.4s; }
+.delay2 { animation-delay: 0.8s; }
+.delay3 { animation-delay: 1.2s; }
+.delay4 { animation-delay: 1.6s; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h1 {
+  color: #ff3399;
+}
+
+p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.foto {
+  width: 160px;
+  height: auto;
+  margin: 0 auto 10px;
+  display: block;
+  transition: transform 0.5s;
+}
+.d.foto > * {
+  animation: zoomGoyang 3s ease-in-out infinite;
+  transition: transform 0.3s ease;
+}
+
+.d.foto> *:hover {
+  transform: scale(1.08); /* Lebih besar saat hover */
+}
+button {
+  margin-top: 5px; /* Tambahkan ini untuk sedikit jarak dari gambar */
+  padding: 10px 30px;
+  font-size: 1em;
+  border: none;
+  border-radius: 25px;
+  background-color: #ff66b2;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease, transform 0.5s;
+}
+
+button:hover {
+  background-color: #ff3399;
+  transform: scale(1.05);
+}
+
+.rotate {
+  transform: rotate(-10deg) scale(1.05) !important;
+}
+
+/* Boneka gif kanan bawah */
+.boneka-kanan {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  width: 100px;
+  height: auto;
+}
+
+/* Gambar hiasan bawah */
+.gambar-bawah {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  gap: 30px;
+  padding: 0 40px;
+}
+.d.gambar-bawah > * {
+  animation: zoomGoyang 3s ease-in-out infinite;
+  transition: transform 0.3s ease;
+}
+
+.d.gambar-bawah > *:hover {
+  transform: scale(1.08); /* Lebih besar saat hover */
+}
+.hiasan {
+  align-items: center;
+  transform: rotate(20deg);
+}
+.hiasan2{
+  align-items: center;
+  transform:rotate(-20deg);
+}
+
+.hias {
+  width: 60px;
+  height: auto;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease;
+}
+
+.hias:hover {
+  transform: scale(1.1);
+}
+
+.caption {
+  font-size: 0.8em;
+  color: #aa6699;
+  margin-top: 6px;
+  font-style: italic;
+}
+
+/* Efek love jatuh */
+.love {
+  position: fixed;
+  top: -30px;
+  font-size: 24px;
+  z-index: 999;
+  animation-name: love-fall;
+  animation-timing-function: linear;
+}
+
+@keyframes love-fall {
+  to {
+    transform: translateY(110vh);
+    opacity: 0;
+  }
+}
+
+/* ===========================
+   Pesan surat (message)
+=========================== */
+
+.message {
+  background: rgba(255, 255, 255, 0.85);
+  padding: 25px;
+  margin: 20px auto;
+  max-width: 90%;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(255, 105, 180, 0.3);
+  text-align: left;
+  animation: fadeMasuk 1.2s ease;
+}
+
+.message p {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeInUp 1s forwards;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #4a4a4a;
+  margin-bottom: 20px;
+}
+
+.fontAlt {
+  font-family: 'Pacifico', cursive;
+  font-size: 24px;
+  color: #d63384;
+}
+
+/* Animasi delay agar muncul satu-satu */
+.delay1 { animation-delay: 0.5s; }
+.delay2 { animation-delay: 1.5s; }
+.delay3 { animation-delay: 2.5s; }
+
+/* Animasi naik perlahan */
+@keyframes fadeMasuk {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
