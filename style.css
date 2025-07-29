@@ -15,7 +15,7 @@ body {
 
 .container {
   text-align: center;
-  background-image:url(im);
+  background-color: white;
   padding: 40px;
   border-radius: 20px;
   box-shadow: 0 10px 25px rgba(rgba(255, 211, 252, 1));
@@ -71,7 +71,7 @@ p {
   transform: scale(1.20); /* Lebih besar saat hover */
 }
 button {
-  margin-top: -5px; /* Tambahkan ini untuk sedikit jarak dari gambar */
+  margin-top: 1px; /* Tambahkan ini untuk sedikit jarak dari gambar */
   padding: 10px 30px;
   font-size: 1em;
   border: none;
