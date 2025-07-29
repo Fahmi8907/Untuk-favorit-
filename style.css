@@ -3,7 +3,7 @@
 body {
   margin: 0;
   padding: 0;
-  background: linear-gradient(to right, #ffd6e8, #ffe6f0);
+  background: linear-gradient(to right, #ffd6e8, #ffe6f0 );
   font-family: "Segoe UI", sans-serif;
   display: flex;
   justify-content: center;
@@ -18,7 +18,7 @@ body {
   background-color: white;
   padding: 40px;
   border-radius: 20px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 25px rgba(rgba(255, 211, 252, 1));
   position: relative;
   max-width: 90%;
 }
@@ -51,7 +51,7 @@ h1 {
 }
 
 p {
-  color: #666;
+  color: #EDB4FF;
   margin-bottom: 20px;
 }
 
@@ -63,12 +63,12 @@ p {
   transition: transform 0.5s;
 }
 .d.foto > * {
-  animation: zoomGoyang 3s ease-in-out infinite;
-  transition: transform 0.3s ease;
+  animation: zoomGoyang 5s ease-in-out infinite;
+  transition: transform 0.5s ease;
 }
 
 .d.foto> *:hover {
-  transform: scale(1.08); /* Lebih besar saat hover */
+  transform: scale(1.20); /* Lebih besar saat hover */
 }
 button {
   margin-top: 5px; /* Tambahkan ini untuk sedikit jarak dari gambar */
