@@ -2,11 +2,6 @@ function masuk() {
   // Efek miring dan love seperti sebelumnya
   const tombol = document.getElementById("tombol");
   tombol.style.transform = "rotate(-10deg) scale(1.1)";
-
-  // Mainkan lagu setelah klik
-  const lagu = document.getElementById("lagu");
-  lagu.play();
-
   // Tambahkan efek love jatuh
   for (let i = 0; i < 20; i++) {
     let love = document.createElement("div");
