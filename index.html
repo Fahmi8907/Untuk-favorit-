@@ -35,9 +35,16 @@
 
   <!-- Boneka GIF -->
   <img src="https://htmlku.com/0/panda/cinta.gif" alt="Boneka" class="boneka-kanan fade delay4" />
-<audio autoplay loop>
-  <source src="https://raw.githubusercontent.com/Fahmi8907/Untuk-favorit-/main/audio/sempurna.mp3" type="audio/mpeg" />
-</audio>
+<audio id="musik" src="https://raw.githubusercontent.com/Fahmi8907/Untuk-favorit-/main/audio/lagu2.mp3"></audio>
+
+<script>
+  window.addEventListener('load', function () {
+    const audio = document.getElementById("musik");
+    audio.play().catch(function(e) {
+      console.log("Autoplay gagal, browser butuh interaksi dulu:", e);
+    });
+  });
+</script>
   <script src="script.js"></script><script>
 function masuk() {
   window.location.href = "halo/hallo.html";
